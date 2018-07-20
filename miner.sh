@@ -16,12 +16,12 @@ make && make install
 sleep 1
 cp minerd /usr/bin/
 sleep 1
-screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u snoopzspinlab@gmail.com -p x'
+screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u mattgradon@gmail.com -p x'
 echo -e '\033[0;32m##### Start miner on screen (to attach use [screen -x miner])...\033[0m'
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
-echo "@reboot screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u snoopzspinlab@gmail.com -p x'" >> mycron
+echo "@reboot screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45700 -u mattgradon@gmail.com -p x'" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
