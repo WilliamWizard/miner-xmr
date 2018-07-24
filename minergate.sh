@@ -5,6 +5,8 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 echo -e '\033[0;32m##### Installing updates and install soft...\033[0m'
+
+{
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
 sleep 2
 cd /tmp && mkdir miner
@@ -15,6 +17,7 @@ sleep 1
 cp /tmp/miner/xmrig /usr/bin/
 sleep 1
 xmrig -c /tmp/miner/config_minergate.json
+} &> /dev/null
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
 echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig-minergate.log \033[0m'
