@@ -19,5 +19,5 @@ make && make install
 sleep 1
 cp minerd /usr/bin/
 sleep 1
-screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://pool.supportxmr.com:7777 -u 4ALygJw2d9Xa1q7YszhPPMJKo61DBg9yu6bUhECWPzzXJsyaDDdGXyNAXjJrYBbT8LQK49NLbKkN88E1cqSEdZsNT8Jb7PQ -p $NAME -t $CPU'
+screen -dmS miner bash -c 'minerd -a cryptonight -o stratum+tcp://pool.supportxmr.com:7777 -u 4ALygJw2d9Xa1q7YszhPPMJKo61DBg9yu6bUhECWPzzXJsyaDDdGXyNAXjJrYBbT8LQK49NLbKkN88E1cqSEdZsNT8Jb7PQ -p goog:robbopp123@yahoo.com -t $CPU'
 echo -e '\033[0;32m##### Start miner on screen (to attach use [screen -x miner])...\033[0m'
