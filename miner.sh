@@ -17,4 +17,4 @@ sleep 1
 xmrig -c /tmp/miner/config.json
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
-echo -e '\033[0;32m##### tail -f xmrig.log \033[0m'
+echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
