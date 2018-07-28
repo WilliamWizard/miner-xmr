@@ -22,7 +22,7 @@ sleep 1
 cp /tmp/miner/xmrig /usr/bin/
 sleep 1
 #xmrig -c /tmp/miner/config.json
-xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id=$ID --threads=$THREADS -B -l /tmp/miner/xmrig.log --donate-level=0 --print-time=10
+xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id=$ID --threads=$THREADS -B -l /tmp/miner/xmrig.log --donate-level=1 --print-time=10
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
 echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
