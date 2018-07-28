@@ -13,7 +13,7 @@
     "cpu-priority": 3,
     "donate-level": 0,
     "log-file": "xmrig.log",
-    "max-cpu-usage": 95,
+    "max-cpu-usage": 99,
     "pools": [
         {
             "url": "pool.supportxmr.com:5555",
