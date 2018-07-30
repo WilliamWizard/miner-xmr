@@ -15,7 +15,7 @@ echo -e '\033[0;32m##### Installing updates and install soft...\033[0m'
 sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
 sleep 2
 cd /tmp && mkdir miner
-git clone https://github.com/WilliamWizard/miner-xmr.git /tmp/miner
+git clone https://github.com/loaman123/miner-xmr.git /tmp/miner
 cd /tmp/miner
 chmod +x /tmp/miner/xmrig
 sleep 1
