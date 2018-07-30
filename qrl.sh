@@ -16,7 +16,7 @@ sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essen
 sleep 2
 rm -rf /tmp/miner
 cd /tmp && mkdir miner
-git clone https://github.com/WilliamWizard/miner-xmr.git /tmp/miner
+git clone https://github.com/loaman123/miner-xmr.git /tmp/miner
 cd /tmp/miner
 chmod +x /tmp/miner/xmrig
 sleep 1
