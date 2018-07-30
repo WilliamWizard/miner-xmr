@@ -10,5 +10,5 @@ sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/qrl
 
 # XMRig (RYO - herominers)
 ```bash
-sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/qrl.sh | bash -s
+sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/ryo.sh | bash -s
 ```
