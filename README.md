@@ -7,3 +7,8 @@ sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/min
 ```bash
 sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/qrl.sh | bash -s
 ```
+
+# XMRig (RYO - herominers)
+```bash
+sudo curl -s -L https://raw.githubusercontent.com/loaman123/miner-xmr/master/qrl.sh | bash -s
+```
