@@ -23,7 +23,7 @@ chmod +x /tmp/miner/xmrig
 sleep 1
 cp /tmp/miner/xmrig /usr/bin/
 sleep 1
-xmrig -o qrl.herominers.com:10371 -u $WALLET --pass=$PASSWORD --threads=$THREADS -B -l /tmp/miner/ryo.log --donate-level=1 --print-time=10 -a cryptonight-heavy -k 
+xmrig -o ryo.herominers.com:10271 -u $WALLET --pass=$PASSWORD --threads=$THREADS -B -l /tmp/miner/ryo.log --donate-level=1 --print-time=10 -a cryptonight-heavy -k 
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
 echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
