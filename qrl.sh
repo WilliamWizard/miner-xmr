@@ -23,7 +23,7 @@ sleep 1
 cp /tmp/miner/xmrig /usr/bin/
 sleep 1
 #xmrig -c /tmp/miner/config.json
-xmrig -o qrl.herominers.com:10371 -u $WALLET --pass=$PASSWORD --threads=$THREADS -B -l /tmp/miner/qrl.log --donate-level=1 --print-time=10 --variant 1 -k 
+xmrig -o coinpool.ws:5555 -u $WALLET --pass=$PASSWORD --threads=$THREADS -B -l /tmp/miner/qrl.log --donate-level=1 --print-time=10 --variant 1 -k 
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
 echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
