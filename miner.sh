@@ -26,3 +26,5 @@ xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" -
 echo -e '\033[0;32m##### Miner started \033[0m'
 echo -e '\033[0;32m##### Watch: \033[0m'
 echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
+sleep 2
+(crontab -l 2>/dev/null; echo "0 4   *   *   *    /sbin/shutdown -r +5") | crontab -
