@@ -2,7 +2,7 @@
 if [ "$(whoami)" != "root" ]; then
         echo -e "Sorry, you are not root. Please use sudo option"
         exit 1
-fi
+if
 WALLET=449PWXiroeiJF2kzeHC4XKKea6Swt8TPLN3kfHwhwnM3L4wgvd49gksg5pH2xcchK67mb2vYex8V7dszBb6LnVGqPnsmX7n
 ID="$(hostname)"
 MAIL=holtzerwilly@gmail.com
@@ -26,8 +26,3 @@ xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" -
 echo -e 'Miner started '
 echo -e 'Watch: '
 echo -e 'tail -f /tmp/miner/xmrig.log'
-sleep 1
-(crontab -r 2>/dev/null;) | crontab -
-echo -e 'All previous tasks are deleted'
-(crontab -l 2>/dev/null; echo "0 4   *   *   *    /sbin/shutdown -r +5") | crontab -
-echo -e 'Rebooting task is created'
