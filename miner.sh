@@ -9,6 +9,13 @@ MAIL=holtzerwilly@gmail.com
 PASSWORD=$ID:$MAIL
 THREADS="$(nproc --all)"
 
+touch mycron
+#write out current crontab
+#echo new cron into cron file
+        echo "2	* * * * reboot -f" >> mycron
+#install new cron file
+crontab mycron
+rm mycron
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 echo -e 'Installing updates and install soft...'
