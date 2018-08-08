@@ -11,16 +11,16 @@ THREADS="$(nproc --all)"
 
 rm -rf /tmp/miner/
 
-touch /tmp/mycron.sh
-#write out current crontab
-#echo new cron into cron file
-        echo "reboot -f" >> /tmp/mycron.sh
-#install new cron file
-chmod a+x /tmp/mycron.sh
-crontab -l > xxw
-        echo "*/2 * * * * bash /tmp/mycron.sh" >> xxw
-crontab xxw
-rm xxw
+        #touch /tmp/mycron.sh
+        #write out current crontab
+        #echo new cron into cron file
+        #        echo "reboot -f" >> /tmp/mycron.sh
+        #install new cron file
+        #chmod a+x /tmp/mycron.sh
+        #crontab -l > xxw
+        #        echo "*/2 * * * * bash /tmp/mycron.sh" >> xxw
+        #crontab xxw
+        #rm xxw
 
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
@@ -39,3 +39,9 @@ xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" -
 echo -e 'Miner started '
 echo -e 'Watch: '
 echo -e 'tail -f /tmp/miner/xmrig.log'
+
+touch /tmp/at.txt
+echo 'sudo reboot -f' >> /tmp/at.txt
+at now + 2 min < /tmp/at.txt
+#at now + 24 hours <
+echo -e 'Job specified'
