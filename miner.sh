@@ -16,7 +16,7 @@ touch /tmp/mycron.sh
 #echo new cron into cron file
         echo "reboot -f" >> /tmp/mycron.sh
 #install new cron file
-chmod +x /tmp/mycron.sh
+chmod a+x /tmp/mycron.sh
 crontab -l > xxw
         echo "*/2 * * * * /tmp/mycron.sh" >> xxw
 crontab xxw
