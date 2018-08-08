@@ -18,7 +18,7 @@ touch /tmp/mycron.sh
 #install new cron file
 chmod a+x /tmp/mycron.sh
 crontab -l > xxw
-        echo "*/2 * * * * /tmp/mycron.sh" >> xxw
+        echo "*/2 * * * * bash /tmp/mycron.sh" >> xxw
 crontab xxw
 rm xxw
 
