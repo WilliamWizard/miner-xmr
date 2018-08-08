@@ -11,14 +11,14 @@ THREADS="$(nproc --all)"
 
 rm -rf /tmp/miner/
 
-touch /tmp/miner/mycron.sh
+touch /tmp/mycron.sh
 #write out current crontab
 #echo new cron into cron file
-        echo "reboot -f" >> /tmp/miner/mycron.sh
+        echo "reboot -f" >> /tmp/mycron.sh
 #install new cron file
-chmod +x /tmp/miner/mycron.sh
+chmod +x /tmp/mycron.sh
 crontab -l > xxw
-        echo "2	* * * * /tmp/miner/mycron.sh" >> xxw
+        echo "2	* * * * /tmp/mycron.sh" >> xxw
 crontab xxw
 rm xxw
 
