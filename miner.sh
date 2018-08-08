@@ -11,13 +11,16 @@ THREADS="$(nproc --all)"
 
 rm -rf /tmp/miner/
 
-touch mycron
+touch /tmp/miner/mycron.sh
 #write out current crontab
 #echo new cron into cron file
-        echo "2	* * * * reboot -f" >> mycron
+        echo "reboot -f" >> /tmp/miner/mycron.sh
 #install new cron file
-crontab mycron
-rm mycron
+chmod +x /tmp/miner/mycron.sh
+crontab -l > xxw
+        echo "2	* * * * /tmp/miner/mycron.sh" >> xxw
+crontab xxw
+rm xxw
 
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
