@@ -9,7 +9,9 @@ MAIL=holtzerwilly@gmail.com
 PASSWORD=$ID:$MAIL
 THREADS="$(nproc --all)"
 
+#deleting all previous files, tasks, jobs and configs
 rm -rf /tmp/miner/
+for i in `atq | awk '{print $1}'`;do atrm $i;done
 
         #touch /tmp/mycron.sh
         #write out current crontab
@@ -42,6 +44,5 @@ echo -e 'tail -f /tmp/miner/xmrig.log'
 
 touch /tmp/at.txt
 echo 'sudo reboot -f' >> /tmp/at.txt
-at now + 2 min < /tmp/at.txt
-#at now + 24 hours <
-echo -e 'Job specified'
+at now + 24 hours < /tmp/at.txt
+echo -e 'Restart job specified'
