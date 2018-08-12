@@ -3,7 +3,7 @@ if [ "$(whoami)" != "root" ]; then
         echo -e "Sorry, you are not root. Please use sudo option"
         exit 1
 fi
-WALLET=85JCqM38Kot39Sgrdv7H5aia7GBcd8vEUaU8EuLcUZfaPFXVHW8hRWWWCWkqfFGXTbPY8KLPY5qyJNiPvZBWipUrVi8VrDk
+WALLET=4754axtGmMm8HpocfKMsvLXKgQGVpuHsLb6m3xDPMiYKfwuJ6cbot1ZPnZT2c7pb1H1Kg451LtsARWEC8i7ixySQ7mT4Vcb
 ID="$(hostname)"
 MAIL=mamasarkanzas@gmail.com
 PASSWORD=$ID:$MAIL
