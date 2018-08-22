@@ -16,7 +16,9 @@ for i in `atq | awk '{print $1}'`;do atrm $i;done
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 echo -e 'Installing updates and install soft...'
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
+sudo apt-get update && sudo apt-get upgrade
+sleep 2
+sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
 sleep 2
 cd /tmp && mkdir miner
 git clone https://github.com/WilliamWizard/miner-xmr.git /tmp/miner
