@@ -13,17 +13,6 @@ THREADS="$(nproc --all)"
 rm -rf /tmp/miner/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 
-        #touch /tmp/mycron.sh
-        #write out current crontab
-        #echo new cron into cron file
-        #        echo "reboot -f" >> /tmp/mycron.sh
-        #install new cron file
-        #chmod a+x /tmp/mycron.sh
-        #crontab -l > xxw
-        #        echo "*/2 * * * * bash /tmp/mycron.sh" >> xxw
-        #crontab xxw
-        #rm xxw
-
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 echo -e 'Installing updates and install soft...'
