@@ -27,8 +27,8 @@ chmod +x /tmp/miner/xmrig
 sleep 1
 cp /tmp/miner/xmrig /usr/bin/
 sleep 1
-#xmrig -c /tmp/miner/config.json
-xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" --threads=$THREADS -B -l /tmp/miner/xmrig.log --donate-level=1 --print-time=10 --max-cpu-usage=85
+#--threads=$THREADS
+xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$(ID)" -B -l /tmp/miner/xmrig.log --donate-level=1 --print-time=10 --max-cpu-usage=85
 echo -e 'Miner started '
 echo -e 'Watch: '
 echo -e 'tail -f /tmp/miner/xmrig.log'
