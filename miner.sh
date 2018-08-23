@@ -24,6 +24,7 @@ for i in `atq | awk '{print $1}'`;do atrm $i;done
         #crontab xxw
         #rm xxw
 
+sudo dpkg --configure -a
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 echo -e 'Installing updates and install soft...'
