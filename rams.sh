@@ -10,7 +10,7 @@ PASSWORD=$ID:$MAIL
 THREADS="$(nproc --all)"
 
 #deleting all previous files, tasks, jobs and configs
-rm -rf /tmp/miner/
+rm -rf /xmrig/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
 sudo dpkg --configure -a
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
@@ -32,7 +32,7 @@ sleep 1
 xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$ID" -B -l xmrig.log --donate-level=1 --print-time=10 --threads=$THREADS
 echo -e 'Miner started'
 echo -e 'Watch:'
-echo -e 'tail -f /tmp/miner/xmrig.log'
+echo -e 'tail -f xmrig.log'
 
 touch /tmp/at.txt
 echo 'sudo reboot -f' >> /tmp/at.txt
