@@ -26,7 +26,7 @@ cmake ..
 make
 chmod +x xmrig
 sleep 1
-cp /tmp/miner/xmrig /usr/bin/
+cp xmrig /usr/bin/
 sleep 1
 #
 xmrig -o pool.supportxmr.com:5555 -u $WALLET --pass=$PASSWORD --rig-id="$ID" -B -l /tmp/miner/xmrig.log --donate-level=1 --print-time=10 --threads=$THREADS
