@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 WALLET=83oQ9PFhGpZbP5YYF7qjWuMfZg3PWefwKYnLay1VgFa7LxdUZiFHcyCAVievH32d42NRYuPtzSGdjHAv1KJZekZ3EZHm5n6
 ID="$(hostname)"
