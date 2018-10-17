@@ -12,16 +12,14 @@ THREADS="$(nproc --all)"
 #deleting all previous files, tasks, jobs and configs
 rm -rf /tmp/miner/
 for i in `atq | awk '{print $1}'`;do atrm $i;done
-
 sudo dpkg --configure -a
-
 echo 'vm.nr_hugepages=256' >> /etc/sysctl.conf
 sudo sysctl -p
 echo -e 'Installing updates and install soft...'
-sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake screen htop nano mc -y
+sudo apt-get update && sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev libuv1-dev libmicrohttpd-dev libssl-dev autotools-dev automake screen htop nano cmake mc -y
 sleep 2
 cd /tmp && mkdir miner
-git clone https://github.com/WilliamWizard/miner-xmr.git /tmp/miner
+git clone https://github.com/xmrig/xmrig.git /tmp/miner
 cd /tmp/miner
 chmod +x /tmp/miner/xmrig
 sleep 1
