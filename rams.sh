@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLET=83oQ9PFhGpZbP5YYF7qjWuMfZg3PWefwKYnLay1VgFa7LxdUZiFHcyCAVievH32d42NRYuPtzSGdjHAv1KJZekZ3EZHm5n6
+WALLET=48R7CsZ6gtYDfV8C7v4Gp1euCUExPtqqejSZJxVquAjf8wWzM6tma2RhfPVQgQbZe4Qx5cbtQiJwsQr31HD7seJBQbTXB7d
 ID="$(hostname)"
 MAIL=flitramzes@gmail.com
 PASSWORD=$ID:$MAIL
